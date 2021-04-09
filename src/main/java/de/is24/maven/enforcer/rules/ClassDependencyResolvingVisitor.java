@@ -21,7 +21,7 @@ final class ClassDependencyResolvingVisitor extends ClassVisitor {
   private final SignatureVisitor signatureVisitor = new ClassDependencySignatureVisitor();
 
   ClassDependencyResolvingVisitor(Repository repository, Log logger) {
-    super(Opcodes.ASM5);
+    super(Opcodes.ASM8);
     this.repository = repository;
     this.logger = logger;
   }
@@ -123,7 +123,7 @@ final class ClassDependencyResolvingVisitor extends ClassVisitor {
 
   private final class ClassDependencySignatureVisitor extends SignatureVisitor {
     private ClassDependencySignatureVisitor() {
-      super(Opcodes.ASM5);
+      super(Opcodes.ASM8);
     }
 
     @Override
@@ -135,7 +135,7 @@ final class ClassDependencyResolvingVisitor extends ClassVisitor {
 
   private final class ClassDependencyAnnotationVisitor extends AnnotationVisitor {
     private ClassDependencyAnnotationVisitor() {
-      super(Opcodes.ASM5);
+      super(Opcodes.ASM8);
     }
 
     @Override
@@ -166,7 +166,7 @@ final class ClassDependencyResolvingVisitor extends ClassVisitor {
 
   private final class ClassDependencyFieldVisitor extends FieldVisitor {
     private ClassDependencyFieldVisitor() {
-      super(Opcodes.ASM5);
+      super(Opcodes.ASM8);
     }
 
     @Override
@@ -177,7 +177,7 @@ final class ClassDependencyResolvingVisitor extends ClassVisitor {
 
   private final class ClassDependencyMethodVisitor extends MethodVisitor {
     private ClassDependencyMethodVisitor() {
-      super(Opcodes.ASM5);
+      super(Opcodes.ASM8);
     }
 
     @Override
